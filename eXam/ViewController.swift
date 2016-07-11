@@ -11,18 +11,38 @@ import UIKit
 var grades: [Double] = []
 var loads = 0
 var semesterGrade = 0.0
+var roundedGrade = 0
+var des = ""
+var courseType = ""
+var totalGrade = 0.0
+var needScore = 0.0
+var maintainScore = 0.0
+
 class ViewController: UIViewController {
 
     
     @IBOutlet weak var gradeLabel: UILabel!
     var grade = ""
     
-    var roundedGrade = 0
+    
     var total = 0.0
     
     
     @IBOutlet weak var semesterGradeLabel: UILabel!
     
+    @IBOutlet weak var examDescription: UILabel!
+    
+    @IBAction func apibCourse(sender: AnyObject) {
+        courseType = "ap"
+    }
+    @IBAction func honorsCourse(sender: AnyObject) {
+        courseType = "honors"
+    }
+    
+    
+    @IBAction func onLevelCourse(sender: AnyObject) {
+        courseType = "onLevel"
+    }
     
     
     @IBAction func one(sender: AnyObject) {
@@ -30,6 +50,7 @@ class ViewController: UIViewController {
         gradeLabel.text = grade
     }
     
+   
     @IBAction func two(sender: AnyObject) {
         grade += "2"
         gradeLabel.text = grade
@@ -108,6 +129,72 @@ class ViewController: UIViewController {
             total += grade
         }
         semesterGrade = total/3
+        roundedGrade = Int(round(semesterGrade))
+        semesterGrade = round(semesterGrade*100)/100
+        
+        
+        
+        if courseType == "ap"
+        {
+            if roundedGrade >= 97
+            {
+                totalGrade = 96.5*7
+                needScore = totalGrade - semesterGrade
+                
+                des = "You have a \(semesterGrade) average! You are maxing the class and do not need to take the exam! However, if you have more than 3 absences, you’ll need a \(needScore) on the exam to maintain the 6.0 GPA!"
+            }
+            
+            else if roundedGrade >= 94
+            {
+                totalGrade = 96.5*7
+                needScore = totalGrade - semesterGrade
+                totalGrade = 93.5*7
+                maintainScore = totalGrade - semesterGrade
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 6.0! In order to maintain your current GPA Point of 5.8, you'll need a \(maintainScore) on the exam!"
+            }
+            else if roundedGrade >= 90
+            {
+                totalGrade = 93.5*7
+                needScore = totalGrade - semesterGrade
+                totalGrade = 89.5*7
+                maintainScore = totalGrade - semesterGrade
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 5.8! In order to maintain your current GPA Point of 5.6, you'll need a \(maintainScore) on the exam!"
+            }
+            
+            else if roundedGrade >= 87
+            {
+                totalGrade = 93.5*7
+                needScore = totalGrade - semesterGrade
+                totalGrade = 86.5*7
+                maintainScore = totalGrade - semesterGrade
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 5.6! In order to maintain your current GPA Point of 5.4, you'll need a \(maintainScore) on the exam!"
+            }
+            
+            else if roundedGrade >= 84
+            {
+                totalGrade = 86.5*7
+                needScore = totalGrade - semesterGrade
+                totalGrade = 83.5*7
+                maintainScore = totalGrade - semesterGrade
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 5.4! In order to maintain your current GPA Point of 5.2, you'll need a \(maintainScore) on the exam!"
+            }
+            
+        }
+        else if courseType == "honors"
+        {
+            
+        }
+        else
+        {
+            
+        }
+        
+        
+        
         
     }
     
@@ -132,10 +219,14 @@ class ViewController: UIViewController {
         {
             let triggerTime = (Int64(NSEC_PER_SEC) * 1)
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
-                self.semesterGradeLabel.text = String(semesterGrade)
+                self.semesterGradeLabel.text = String(roundedGrade)
                 print("printed the label")
                 print(semesterGrade)
+                print(roundedGrade)
             })
+            
+            
+            
         }
         reloadInputViews()
     }

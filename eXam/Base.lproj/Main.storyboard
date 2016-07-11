@@ -28,7 +28,7 @@
                                 <rect key="frame" x="250" y="297" width="100" height="30"/>
                                 <state key="normal" title="Let's Find Out!"/>
                                 <connections>
-                                    <segue destination="AD8-Sc-pCc" kind="show" id="z36-vp-f0b"/>
+                                    <segue destination="eDZ-Li-nHM" kind="show" id="xuZ-rf-q6X"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -42,6 +42,70 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-454" y="300"/>
+        </scene>
+        <!--Class Type-->
+        <scene sceneID="7gd-eq-65y">
+            <objects>
+                <viewController title="Class Type" id="eDZ-Li-nHM" customClass="ViewController" customModule="eXam" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FpN-Ca-1tr"/>
+                        <viewControllerLayoutGuide type="bottom" id="ADt-5m-tKJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vTP-J0-3IB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6g9-ZT-luk">
+                                <rect key="frame" x="253" y="243" width="94" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="AP/IB"/>
+                                <connections>
+                                    <action selector="apibCourse:" destination="eDZ-Li-nHM" eventType="touchUpInside" id="c5o-AX-gRa"/>
+                                    <segue destination="AD8-Sc-pCc" kind="show" id="cPU-c6-Y3M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4d-ts-odm">
+                                <rect key="frame" x="91" y="337" width="419" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Pre-AP/Honors"/>
+                                <connections>
+                                    <action selector="honorsCourse:" destination="eDZ-Li-nHM" eventType="touchUpInside" id="w4j-5S-eko"/>
+                                    <segue destination="AD8-Sc-pCc" kind="show" id="hyA-eA-NgO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRu-3h-avp">
+                                <rect key="frame" x="226.5" y="428" width="147" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="On Level"/>
+                                <connections>
+                                    <action selector="onLevelCourse:" destination="eDZ-Li-nHM" eventType="touchUpInside" id="ydu-9b-ouo"/>
+                                    <segue destination="AD8-Sc-pCc" kind="show" id="Uiw-Su-Qb0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What type of class did you take?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zB2-an-0hV">
+                                <rect key="frame" x="176" y="120" width="248" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zB2-an-0hV" firstAttribute="top" secondItem="FpN-Ca-1tr" secondAttribute="bottom" constant="100" id="DMX-Bv-Nvs"/>
+                            <constraint firstItem="wRu-3h-avp" firstAttribute="centerX" secondItem="vTP-J0-3IB" secondAttribute="centerX" id="GES-JT-Jcj"/>
+                            <constraint firstItem="i4d-ts-odm" firstAttribute="top" secondItem="6g9-ZT-luk" secondAttribute="bottom" constant="34" id="HJ6-RV-pSh"/>
+                            <constraint firstItem="6g9-ZT-luk" firstAttribute="top" secondItem="zB2-an-0hV" secondAttribute="bottom" constant="102" id="Rtf-A0-LsE"/>
+                            <constraint firstItem="i4d-ts-odm" firstAttribute="centerX" secondItem="vTP-J0-3IB" secondAttribute="centerX" id="T13-dw-Emr"/>
+                            <constraint firstItem="wRu-3h-avp" firstAttribute="top" secondItem="i4d-ts-odm" secondAttribute="bottom" constant="37" id="Ueg-hf-ARW"/>
+                            <constraint firstItem="zB2-an-0hV" firstAttribute="centerX" secondItem="vTP-J0-3IB" secondAttribute="centerX" id="srL-71-uUT"/>
+                            <constraint firstItem="6g9-ZT-luk" firstAttribute="centerX" secondItem="vTP-J0-3IB" secondAttribute="centerX" id="wxj-Pd-YT2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EVq-nf-JJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="300"/>
         </scene>
         <!--First 6 Weeks-->
         <scene sceneID="1My-Zs-eYB">
@@ -160,7 +224,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHc-Jg-ebI">
                                 <rect key="frame" x="20" y="151" width="560" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6H-Te-Aa1">
@@ -347,7 +411,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fao-AZ-qla">
                                 <rect key="frame" x="20" y="151" width="560" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nyy-EO-k3X">
@@ -403,8 +467,8 @@
                             <mask key="constraints">
                                 <exclude reference="E8s-zn-QKe"/>
                                 <exclude reference="3AI-Hq-kKY"/>
-                                <exclude reference="rtY-x5-SMt"/>
                                 <exclude reference="FkP-aO-g6p"/>
+                                <exclude reference="rtY-x5-SMt"/>
                                 <exclude reference="VIi-8J-uTV"/>
                             </mask>
                         </variation>
@@ -534,7 +598,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pND-zW-Iln">
                                 <rect key="frame" x="20" y="151" width="560" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fQ-f9-gy2">
@@ -589,8 +653,8 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="enm-DU-PBg"/>
-                                <exclude reference="VsG-fv-e6v"/>
                                 <exclude reference="Hrz-lX-cg1"/>
+                                <exclude reference="VsG-fv-e6v"/>
                                 <exclude reference="bPJ-4M-2NM"/>
                                 <exclude reference="XsT-f6-Exl"/>
                             </mask>
@@ -619,13 +683,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your projected semester average is:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJO-sA-I9q">
                                 <rect key="frame" x="20" y="70" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXS-FF-CXz">
-                                <rect key="frame" x="20" y="177" width="560" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="20" y="177" width="560" height="64"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNf-Ht-MWx">
@@ -637,20 +701,29 @@
                                     <segue destination="AD8-Sc-pCc" kind="show" id="AAW-mV-THX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7l-dr-t5Q">
+                                <rect key="frame" x="279" y="305" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Q71-Gs-nlI" firstAttribute="top" secondItem="jNf-Ht-MWx" secondAttribute="bottom" constant="154" id="41b-J7-PtK"/>
                             <constraint firstItem="jXS-FF-CXz" firstAttribute="leading" secondItem="yhC-cO-X8e" secondAttribute="leadingMargin" id="A8g-QL-G1d"/>
+                            <constraint firstItem="X7l-dr-t5Q" firstAttribute="centerX" secondItem="yhC-cO-X8e" secondAttribute="centerX" id="QmS-ML-9tG"/>
                             <constraint firstItem="jXS-FF-CXz" firstAttribute="top" secondItem="XJO-sA-I9q" secondAttribute="bottom" constant="86" id="UN9-Zz-ZLy"/>
                             <constraint firstItem="jNf-Ht-MWx" firstAttribute="centerX" secondItem="yhC-cO-X8e" secondAttribute="centerX" id="YRN-Qw-zIe"/>
                             <constraint firstItem="XJO-sA-I9q" firstAttribute="top" secondItem="QD4-C1-rEr" secondAttribute="bottom" constant="50" id="hra-91-AMY"/>
+                            <constraint firstItem="X7l-dr-t5Q" firstAttribute="top" secondItem="jXS-FF-CXz" secondAttribute="bottom" constant="64" id="lOP-t1-jhG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jXS-FF-CXz" secondAttribute="trailing" id="ttc-bE-og0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XJO-sA-I9q" secondAttribute="trailing" id="vTo-OE-Ij3"/>
                             <constraint firstItem="XJO-sA-I9q" firstAttribute="leading" secondItem="yhC-cO-X8e" secondAttribute="leadingMargin" id="vzG-Ku-7GH"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="examDescription" destination="X7l-dr-t5Q" id="b9Y-Y9-Rt7"/>
                         <outlet property="semesterGradeLabel" destination="jXS-FF-CXz" id="fC7-gF-LDg"/>
                     </connections>
                 </viewController>
@@ -660,6 +733,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AAW-mV-THX"/>
+        <segue reference="hyA-eA-NgO"/>
     </inferredMetricsTieBreakers>
 </document>
