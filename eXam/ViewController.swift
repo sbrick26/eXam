@@ -139,7 +139,8 @@ class ViewController: UIViewController {
             if roundedGrade >= 97
             {
                 totalGrade = 96.5*7
-                needScore = totalGrade - semesterGrade
+                needScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
                 
                 des = "You have a \(semesterGrade) average! You are maxing the class and do not need to take the exam! However, if you have more than 3 absences, you’ll need a \(needScore) on the exam to maintain the 6.0 GPA!"
             }
@@ -147,28 +148,36 @@ class ViewController: UIViewController {
             else if roundedGrade >= 94
             {
                 totalGrade = 96.5*7
-                needScore = totalGrade - semesterGrade
+                needScore = totalGrade - semesterGrade*6
+                
                 totalGrade = 93.5*7
-                maintainScore = totalGrade - semesterGrade
+                maintainScore = totalGrade - semesterGrade*6
+                
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
                 
                 des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 6.0! In order to maintain your current GPA Point of 5.8, you'll need a \(maintainScore) on the exam!"
             }
             else if roundedGrade >= 90
             {
                 totalGrade = 93.5*7
-                needScore = totalGrade - semesterGrade
+                needScore = totalGrade - semesterGrade*6
                 totalGrade = 89.5*7
-                maintainScore = totalGrade - semesterGrade
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
                 
                 des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 5.8! In order to maintain your current GPA Point of 5.6, you'll need a \(maintainScore) on the exam!"
             }
             
             else if roundedGrade >= 87
             {
-                totalGrade = 93.5*7
-                needScore = totalGrade - semesterGrade
+                totalGrade = 89.5*7
+                needScore = totalGrade - semesterGrade*6
                 totalGrade = 86.5*7
-                maintainScore = totalGrade - semesterGrade
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
                 
                 des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 5.6! In order to maintain your current GPA Point of 5.4, you'll need a \(maintainScore) on the exam!"
             }
@@ -176,21 +185,295 @@ class ViewController: UIViewController {
             else if roundedGrade >= 84
             {
                 totalGrade = 86.5*7
-                needScore = totalGrade - semesterGrade
+                needScore = totalGrade - semesterGrade*6
                 totalGrade = 83.5*7
-                maintainScore = totalGrade - semesterGrade
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
                 
                 des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 5.4! In order to maintain your current GPA Point of 5.2, you'll need a \(maintainScore) on the exam!"
+            }
+            else if roundedGrade >= 80
+            {
+                totalGrade = 83.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 79.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 5.2! In order to maintain your current GPA Point of 5.0, you'll need a \(maintainScore) on the exam!"
+            }
+            else if roundedGrade >= 77
+            {
+                totalGrade = 79.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 76.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 5.0! In order to maintain your current GPA Point of 4.8, you'll need a \(maintainScore) on the exam!"
+            }
+            else if roundedGrade >= 74
+            {
+                totalGrade = 76.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 73.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 4.8! In order to maintain your current GPA Point of 4.6, you'll need a \(maintainScore) on the exam!"
+            }
+            else if roundedGrade >= 71
+            {
+                totalGrade = 73.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 70.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 4.6! In order to maintain your current GPA Point of 4.4, you'll need a \(maintainScore) on the exam!"
+            }
+            else{
+                totalGrade = 70.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 83.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 4.4! In order to maintain your current GPA Point of 4.2, you'll need a \(maintainScore) on the exam!"
             }
             
         }
         else if courseType == "honors"
         {
-            
+            if roundedGrade >= 97
+            {
+                totalGrade = 96.5*7
+                needScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                
+                
+                des = "You have a \(semesterGrade) average! You are maxing the class and do not need to take the exam! However, if you have more than 3 absences, you’ll need a \(needScore) on the exam to maintain the 5.5 GPA!"
+            }
+                
+            else if roundedGrade >= 94
+            {
+                totalGrade = 96.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 93.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 5.5! In order to maintain your current GPA Point of 5.3, you'll need a \(maintainScore) on the exam!"
+            }
+            else if roundedGrade >= 90
+            {
+                totalGrade = 93.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 89.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 5.3! In order to maintain your current GPA Point of 5.1, you'll need a \(maintainScore) on the exam!"
+            }
+                
+            else if roundedGrade >= 87
+            {
+                totalGrade = 89.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 86.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 5.1! In order to maintain your current GPA Point of 4.9, you'll need a \(maintainScore) on the exam!"
+            }
+                
+            else if roundedGrade >= 84
+            {
+                totalGrade = 86.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 83.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 4.9! In order to maintain your current GPA Point of 4.7, you'll need a \(maintainScore) on the exam!"
+            }
+            else if roundedGrade >= 80
+            {
+                totalGrade = 83.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 79.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 4.7! In order to maintain your current GPA Point of 4.5, you'll need a \(maintainScore) on the exam!"
+            }
+            else if roundedGrade >= 77
+            {
+                totalGrade = 79.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 76.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 4.5! In order to maintain your current GPA Point of 4.3, you'll need a \(maintainScore) on the exam!"
+            }
+            else if roundedGrade >= 74
+            {
+                totalGrade = 76.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 73.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 4.3! In order to maintain your current GPA Point of 4.1, you'll need a \(maintainScore) on the exam!"
+            }
+            else if roundedGrade >= 71
+            {
+                totalGrade = 73.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 70.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 4.1! In order to maintain your current GPA Point of 3.9, you'll need a \(maintainScore) on the exam!"
+            }
+            else{
+                totalGrade = 70.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 83.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 3.9! In order to maintain your current GPA Point of 3.7, you'll need a \(maintainScore) on the exam!"
+            }
         }
         else
         {
-            
+            if roundedGrade >= 97
+            {
+                totalGrade = 96.5*7
+                needScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+              
+                
+                des = "You have a \(semesterGrade) average! You are maxing the class and do not need to take the exam! However, if you have more than 3 absences, you’ll need a \(needScore) on the exam to maintain the 5.0 GPA!"
+            }
+                
+            else if roundedGrade >= 94
+            {
+                totalGrade = 96.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 93.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 5.0! In order to maintain your current GPA Point of 4.8, you'll need a \(maintainScore) on the exam!"
+            }
+            else if roundedGrade >= 90
+            {
+                totalGrade = 93.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 89.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 4.8! In order to maintain your current GPA Point of 4.6, you'll need a \(maintainScore) on the exam!"
+            }
+                
+            else if roundedGrade >= 87
+            {
+                totalGrade = 89.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 86.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 4.6! In order to maintain your current GPA Point of 4.4, you'll need a \(maintainScore) on the exam!"
+            }
+                
+            else if roundedGrade >= 84
+            {
+                totalGrade = 86.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 83.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 4.4! In order to maintain your current GPA Point of 4.2, you'll need a \(maintainScore) on the exam!"
+            }
+            else if roundedGrade >= 80
+            {
+                totalGrade = 83.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 79.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 4.2! In order to maintain your current GPA Point of 4.0, you'll need a \(maintainScore) on the exam!"
+            }
+            else if roundedGrade >= 77
+            {
+                totalGrade = 79.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 76.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 4.0! In order to maintain your current GPA Point of 3.8, you'll need a \(maintainScore) on the exam!"
+            }
+            else if roundedGrade >= 74
+            {
+                totalGrade = 76.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 73.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 3.8! In order to maintain your current GPA Point of 3.6, you'll need a \(maintainScore) on the exam!"
+            }
+            else if roundedGrade >= 71
+            {
+                totalGrade = 73.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 70.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 3.6! In order to maintain your current GPA Point of 3.4, you'll need a \(maintainScore) on the exam!"
+            }
+            else{
+                totalGrade = 70.5*7
+                needScore = totalGrade - semesterGrade*6
+                totalGrade = 83.5*7
+                maintainScore = totalGrade - semesterGrade*6
+                needScore = round(needScore*100)/100
+                maintainScore = round(maintainScore*100)/100
+                
+                des = "You have a \(semesterGrade) average! If you took the exam, you would need a \(needScore) to get to the next GPA Point, which is 3.4! In order to maintain your current GPA Point of 3.2, you'll need a \(maintainScore) on the exam!"
+            }
         }
         
         
@@ -206,6 +489,7 @@ class ViewController: UIViewController {
         grade = ""
         roundedGrade = 0
         total = 0.0
+        des = ""
     }
     
     
@@ -215,11 +499,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         loads += 1
         print(loads)
-        if loads%5 == 0
+        if loads%6 == 0
         {
             let triggerTime = (Int64(NSEC_PER_SEC) * 1)
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
                 self.semesterGradeLabel.text = String(roundedGrade)
+                self.examDescription.text = des
                 print("printed the label")
                 print(semesterGrade)
                 print(roundedGrade)
