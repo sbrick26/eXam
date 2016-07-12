@@ -27,11 +27,20 @@ class ViewController: UIViewController {
     
     var total = 0.0
     
+    @IBOutlet weak var nextFirstLabel: UIButton!
+    @IBOutlet weak var question: UILabel!
+    @IBOutlet weak var nextSecondLabel: UIButton!
     
     @IBOutlet weak var semesterGradeLabel: UILabel!
     
+    @IBOutlet weak var nextThirdLabel: UIButton!
     @IBOutlet weak var examDescription: UILabel!
     
+    @IBOutlet weak var onLabel: UIButton!
+    @IBOutlet weak var preLabel: UIButton!
+    @IBOutlet weak var apibCourseLabel: UIButton!
+    
+    @IBOutlet weak var startButton: UIButton!
     @IBAction func apibCourse(sender: AnyObject) {
         courseType = "ap"
     }
@@ -514,6 +523,71 @@ class ViewController: UIViewController {
             
         }
         reloadInputViews()
+        
+       
+        self.view.layer.backgroundColor = UIColor(colorLiteralRed: 3/255, green: 156/255,blue: 159/255, alpha: 1).CGColor
+        if loads == 3{
+            nextFirstLabel.layer.backgroundColor = UIColor.whiteColor().CGColor
+        }
+        if loads == 4{
+            nextSecondLabel.layer.backgroundColor = UIColor.whiteColor().CGColor
+        }
+        if loads == 5{
+            nextThirdLabel.layer.backgroundColor = UIColor.whiteColor().CGColor
+        }
+        if loads == 1
+        {
+            startButton.layer.borderWidth = 1
+            startButton.layer.borderColor = UIColor.whiteColor().CGColor
+            startButton.layer.backgroundColor = UIColor.whiteColor().CGColor
+            startButton.titleLabel?.textColor = UIColor.whiteColor()
+            startButton.layer.cornerRadius = 25
+            startButton.titleLabel?.font = UIFont(name: "Helvetica Neue Bold", size: 15)
+        }
+        
+        if loads == 2 || loads == 7{
+            apibCourseLabel.layer.borderWidth = 1
+            apibCourseLabel.layer.borderColor = UIColor.whiteColor().CGColor
+            apibCourseLabel.layer.backgroundColor = UIColor.whiteColor().CGColor
+            apibCourseLabel.titleLabel?.textColor = UIColor.whiteColor()
+            apibCourseLabel.layer.cornerRadius = 25
+            apibCourseLabel.titleLabel?.font = UIFont(name: "Helvetica Neue Bold", size: 15)
+            preLabel.layer.borderWidth = 1
+            preLabel.layer.borderColor = UIColor.whiteColor().CGColor
+            preLabel.layer.backgroundColor =  UIColor.whiteColor().CGColor
+            preLabel.titleLabel?.textColor = UIColor.whiteColor()
+            preLabel.layer.cornerRadius = 25
+            preLabel.titleLabel?.font = UIFont(name: "Helvetica Neue Bold", size: 15)
+            onLabel.layer.borderWidth = 1
+            onLabel.layer.borderColor = UIColor.whiteColor().CGColor
+            onLabel.layer.backgroundColor =  UIColor.whiteColor().CGColor
+            onLabel.titleLabel?.textColor = UIColor.whiteColor()
+            onLabel.layer.cornerRadius = 25
+            onLabel.titleLabel?.font = UIFont(name: "Helvetica Neue Bold", size: 15)
+        
+        
+        
+        }
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+         if loads == 2 || loads == 7 {
+        UIView.animateWithDuration(0.35, animations: {
+            self.apibCourseLabel.center.x -= self.view.bounds.width
+            self.preLabel.center.x += self.view.bounds.width
+            self.onLabel.center.x -= self.view.bounds.width
+            self.question.center.x += self.view.bounds.width
+            
+        })
+        }
+        if loads == 1 {
+            UIView.animateWithDuration(0.35, animations: {
+                self.startButton.center.x -= self.view.bounds.width
+                
+            })
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -521,6 +595,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
 
 }
 
